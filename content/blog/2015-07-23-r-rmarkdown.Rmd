@@ -4,7 +4,6 @@ author: "Cynthia Kineza"
 date: '2017-10-11'
 output: pdf_document
 ---
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE)
 knitr::opts_chunk$set(tidy.opts=list(width.cutoff=60),tidy=TRUE)
@@ -21,8 +20,10 @@ There are three ways this can be
 
 ####1. By installing whole tidyverse:
 install.packages("tidyverse")
+
 ####2. Install just ggplot2: This being the most used.
 install.packages("ggplot2")
+
 ####3. Or the the development version from GitHub; install.packages("devtools")
 devtools::install_github("tidyverse/ggplot2")
 
