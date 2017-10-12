@@ -10,7 +10,7 @@
 <meta name="description" content="Simple minimalist theme">
 <meta name="keywords" content="minimalist,blog,goa,hugo,developer">
 
-<base href="https://ckineza.github.io">
+<base href="/">
 
 <title>My blog</title>
 
@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto+Slab:400,700|Roboto:300,300i,400,400i,500,500i,700,700i">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://ckineza.github.io/css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 
 
 
@@ -43,22 +43,13 @@
 
 
 <header class="row text-left title">
-  <h1 class="title">Hello R Markdown</h1>
+  <h1 class="title">Let&#39;s talk about awesomeness of ggplot2</h1>
 </header>
 <section id="category-pane" class="row meta">
   
   <div class="col-md-12">
     <h6 class="text-left meta">
-      PUBLISHED ON JUL 23, 2015
-      
-      
-      
-      —
-      
-      
-      <a class="meta" href="/categories/r">R</a>
-      
-      
+      PUBLISHED ON OCT 11, 2017
       
     </h6>
   </div>
@@ -66,44 +57,67 @@
 </section>
 <section id="content-pane" class="row">
   <div class="col-md-12 text-justify content">
-    <div id="r-markdown" class="section level1">
-<h1>R Markdown</h1>
-<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
-<p>You can embed an R code chunk like this:</p>
-<pre class="r"><code>summary(cars)
-##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00
-fit &lt;- lm(dist ~ speed, data = cars)
-fit
-## 
-## Call:
-## lm(formula = dist ~ speed, data = cars)
-## 
-## Coefficients:
-## (Intercept)        speed  
-##     -17.579        3.932</code></pre>
+    <p>I was asked recently how to utilize ggplot2 as it has been my most used graphical tool for all my data analysis projects. So I thought my first blog would introduce this cool graphical tool.</p>
+<div id="ggplot2" class="section level3">
+<h3>ggplot2</h3>
+<p>ggplot2 is such a powerful R package for visualization. I personally admire the clarity and aesthetic of the plots. It was created by Hadley Wickham in 2005. It is one of the best maintained R packages. So let’s get started on how to use it.</p>
 </div>
-<div id="including-plots" class="section level1">
-<h1>Including Plots</h1>
-<p>You can also embed plots. See Figure <a href="#fig:pie">1</a> for example:</p>
-<pre class="r"><code>par(mar = c(0, 1, 0, 1))
-pie(
-  c(280, 60, 20),
-  c(&#39;Sky&#39;, &#39;Sunny side of pyramid&#39;, &#39;Shady side of pyramid&#39;),
-  col = c(&#39;#0292D8&#39;, &#39;#F7EA39&#39;, &#39;#C4B632&#39;),
-  init.angle = -50, border = NA
-)</code></pre>
-<div class="figure"><span id="fig:pie"></span>
-<img src="/blog/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png" alt="A fancy pie chart." width="672" />
-<p class="caption">
-Figure 1: A fancy pie chart.
-</p>
+<div id="installation" class="section level3">
+<h3>Installation</h3>
+<p>There are three ways this can be</p>
+<div id="by-installing-whole-tidyverse" class="section level4">
+<h4>1. By installing whole tidyverse:</h4>
+<p>install.packages(“tidyverse”)</p>
 </div>
+<div id="install-just-ggplot2-this-being-the-most-used." class="section level4">
+<h4>2. Install just ggplot2: This being the most used.</h4>
+<p>install.packages(“ggplot2”)</p>
+</div>
+<div id="or-the-the-development-version-from-github-install.packagesdevtools" class="section level4">
+<h4>3. Or the the development version from GitHub; install.packages(“devtools”)</h4>
+<p>devtools::install_github(“tidyverse/ggplot2”)</p>
+</div>
+</div>
+<div id="usage" class="section level3">
+<h3>Usage</h3>
+<p>In order to start of: you first write ggplot(), then inside supply a dataset; then use aes() which provides aesthetic mappings that describes how variables in the data are mapped to visual properties of geoms. Then, you can start adding layers such as geom_smooth(), geom_jitter(), geom_line(), ggtitle()… and scales like scale_linetype_manual ( in the below code you will see how this allows us to add an additional element on the legend tab, faceting specifications (you can have multiple panels based on a variable, split the plot using facets)</p>
+</div>
+<div id="example-1" class="section level3">
+<h3>Example 1:</h3>
+<p>This data I am using here was used to measure the association between a typical patient’ s emergency department “ED” LOS (length of stay until discharge or hospital admission) and factors that potentially contribute to LOS measured over a one-year period. The data was collected from DAP-2016.</p>
+<p>For convenience I divided time of day in 3 common work shifts: 1 (11:00pm-6:59am), 2 (7am-2:59pm),and 3: (3:00pm-10:59pm). Similarly for acuity level, 1 (Weak), 2 &amp; 3(Mild); 4 &amp; 5 (severe).TypeofDay ( 1: Weekend &amp; 0:Weekdays)</p>
+<pre class="r"><code>ggplot(emergency.data, aes(x = age, y = los, group = interaction(acuitylevels, 
+    typeofday), colour = acuitylevels, linetype = factor(typeofday))) + 
+    geom_smooth(size = 1, alpha = 0.2) + ylab(&quot;length of stay&quot;) + 
+    ggtitle(&quot;Figure 1&quot;) + xlab(&quot;Age&quot;) + scale_linetype_manual(&quot;typeofday&quot;, 
+    values = c(1, 2, 3)) + theme_bw() + theme(axis.text.y = element_text(angle = 90, 
+    hjust = 0.5), plot.margin = rep(unit(0, &quot;null&quot;), 4), legend.position = &quot;bottom&quot;, 
+    legend.box = &quot;vertical&quot;, text = element_text(size = 9), legend.text = element_text(size = 6)) + 
+    scale_x_continuous(breaks = seq(18, 85, 10))
+## `geom_smooth()` using method = &#39;gam&#39;</code></pre>
+<p><img src="/blog/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-2-1.png" width="672" /> As you can see in the code above, aes() gives us the x and y variables, and you can introduce additional variables that will interact, acuity levels has three distinct colors ( red, green and blue) and if you look closely typeofday show us that lines that are dotted represent 1, and lines that are continuous are 0. So this now makes the graph easy to read: for people with acuitylevel that is mild (red), they tend to have a higher length of stay during weekdays( continuous line that represent 0: Weekdays)</p>
+<p>geom_smooth : smoothing method (function) to use, eg. lm, glm, gam, loess, rlm. For datasets with n &lt; 1000 default is loess. For datasets with 1000 or more observations defaults to gam. In case you have a scatterplot with a lot of noise, seeing dominant pattern can be taxing. In this case adding a smoothed line to the plot with geom_smooth() would be greatly beneficial.</p>
+<p>scale_x_continuous() here is giving limits of age range: from 18 to 85 with increments of 10.</p>
+</div>
+<div id="example-2" class="section level3">
+<h3>Example 2:</h3>
+<p>Below is a plot that illustrates the fraction of total medical expenditures that are attributable to having a major smoking-caused disease (MSCD) — including lung cancer, laryngeal cancer, COPD, CHD, stroke, and other cancers — for different age, sex and demographic strata. The data comes from the National Medical Expenditure Survey (NMES)</p>
+<pre class="r"><code>ggplot(dat, aes(x = lastage, y = noexp, group = interaction(mscd, 
+    male), colour = mscd, linetype = factor(male))) + geom_jitter(size = 0.5) + 
+    geom_smooth(size = 1.1, alpha = 0.5) + ylab(&quot;Zero Expenditures&quot;) + 
+    ggtitle(&quot;Figure 2&quot;) + xlab(&quot;Age&quot;) + scale_linetype_manual(&quot;Male&quot;, 
+    values = c(1, 3)) + theme_bw() + theme(axis.text.y = element_text(angle = 90, 
+    hjust = 0.5), plot.margin = rep(unit(0, &quot;null&quot;), 4), legend.position = &quot;bottom&quot;, 
+    legend.box = &quot;horizontal&quot;, text = element_text(size = 9), 
+    legend.text = element_text(size = 6)) + scale_x_continuous(breaks = seq(40, 
+    80, 10))</code></pre>
+<p><img src="/blog/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>Lastly, a quick illustration of facet_wrap using the mpg data which one of the R default data.</p>
+<pre class="r"><code>data(&quot;mtcars&quot;)
+ggplot(mpg, aes(displ, hwy)) + ggtitle(&quot;Figure 3&quot;) + geom_point() + 
+    facet_wrap(~class, nrow = 4)</code></pre>
+<p><img src="/blog/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>I hope you enjoyed this little introduction to ggplot2.</p>
 </div>
 
   </div>
@@ -112,19 +126,6 @@ Figure 1: A fancy pie chart.
   
   <div class="col-md-12">
     <h6 class="text-right meta">
-      
-      
-      
-      TAGS:
-      
-      
-      <a class="meta" href="/tags/r-markdown">R MARKDOWN</a>, 
-      
-      <a class="meta" href="/tags/plot">PLOT</a>, 
-      
-      <a class="meta" href="/tags/regression">REGRESSION</a>
-      
-      
       
     </h6>
   </div>
@@ -161,13 +162,9 @@ Figure 1: A fancy pie chart.
   
   
   
-  <span><a class="menu-item" href="/blog">blog</a></span>
   
   
-  <span><a class="menu-item" href="https://ckineza.github.io/blog/second/"> | next &gt;</a></span>
-  
-  
-  <h4 class="text-center"><a class="menu-item" href="https://ckineza.github.io">home</a></h4>
+  <h4 class="text-center"><a class="menu-item" href="/">home</a></h4>
 </section>
 
 
@@ -175,7 +172,7 @@ Figure 1: A fancy pie chart.
 <footer class="row text-center footer">
   <hr />
   
-  <h6 class="text-center copyright">© 2016. Erlich Bachman. <a href="http://creativecommons.org/licenses/by/3.0/">Some Rights Reserved</a>.</h6>
+  <h6 class="text-center copyright">© 2017. Cynthia kineza. <a href="http://creativecommons.org/licenses/by/3.0/">Some Rights Reserved</a>.</h6>
   
   <h6 class="text-center powered">Powered by <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/shenoybr/hugo-goa">Goa</a>.</h6>
   
