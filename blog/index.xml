@@ -12,13 +12,13 @@
     
     
     <item>
-      <title>Let&#39;s talk about awesomeness of ggplot2</title>
+      <title>Quick tutorial on ggplot2</title>
       <link>/blog/2015-07-23-r-rmarkdown/</link>
       <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>/blog/2015-07-23-r-rmarkdown/</guid>
-      <description>I was asked recently how to utilize ggplot2 as it has been my most used graphical tool for all my data analysis projects. So I thought my first blog would introduce this cool graphical tool.
-ggplot2 ggplot2 is such a powerful R package for visualization. I personally admire the clarity and aesthetic of the plots. It was created by Hadley Wickham in 2005. It is one of the best maintained R packages.</description>
+      <description>ggplot2 has been my most used graphical tool for all my data analysis projects. So I thought my first blog would be a short tutorial on how to use it to create plots.
+ggplot2 ggplot2 is such a powerful R package for visualization. I personally admire the clarity and aesthetic of the plots. It was created by Hadley Wickham in 2005. It is one of the best maintained R packages. So let’s get started:</description>
     </item>
     
   </channel>
