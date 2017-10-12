@@ -1,5 +1,5 @@
 ---
-title: "Let's talk about awesomeness of ggplot2"
+title: "Quick tutorial on ggplot2"
 author: "Cynthia Kineza"
 date: '2017-10-11'
 output: pdf_document
@@ -10,32 +10,30 @@ knitr::opts_chunk$set(collapse = TRUE)
 knitr::opts_chunk$set(tidy.opts=list(width.cutoff=60),tidy=TRUE)
 ```
 
-I was asked recently how to utilize ggplot2 as it has been my most used graphical tool for all my data analysis projects. So I thought my first blog would introduce this cool graphical tool.
+ggplot2 has been my most used graphical tool for all my data analysis projects. So I thought my first blog would be a short tutorial on how to use it to create plots.
 
 ###ggplot2
 ggplot2 is such a powerful R package for visualization. I personally admire the clarity and aesthetic of the plots. It was created by Hadley Wickham in 2005. It is one of the best maintained R packages. 
-So let's get started on how to use it.
+So let's get started:
 
 ###Installation
 There are three ways this can be
 
 ####1. By installing whole tidyverse:
 install.packages("tidyverse")
-
 ####2. Install just ggplot2: This being the most used.
 install.packages("ggplot2")
-
 ####3. Or the the development version from GitHub; install.packages("devtools")
 devtools::install_github("tidyverse/ggplot2")
 
 ### Usage
 
 In order to start of: you first write ggplot(), then inside supply a dataset; then use aes() which provides aesthetic mappings that describes how variables in the data are mapped to visual properties of geoms.
-Then, you can start adding layers such as geom_smooth(), geom_jitter(), geom_line(), ggtitle()... and scales like scale_linetype_manual ( in the below code you will see how this allows us to add an additional element on the legend tab, faceting specifications (you can have multiple panels based on a variable, split the plot using facets)
+Then, you can start adding layers such as geom_smooth(), geom_jitter(), geom_line(), ggtitle()... and scales like scale_linetype_manual ( in the below code you will see how this allows us to add an additional element on the legend tab), faceting specifications (you can have multiple panels based on a variable, split the plot using facets)
 
 
 ### Example 1:
-This data I am using here was used to measure the association between a typical patient' s emergency department "ED" LOS (length of stay until discharge or hospital admission) and factors that potentially contribute to LOS measured over a one-year period. The data was collected from DAP-2016.
+This data I am using here was used to measure the association between a typical patient' s emergency department "ED" LOS (length of stay until discharge or hospital admission) and factors that potentially contribute to LOS measured over a one-year period. It was collected from DAP-2016.
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 library(ggplot2)
 library(gridExtra)
@@ -86,10 +84,10 @@ For convenience I divided time of day in 3 common work shifts: 1 (11:00pm-6:59am
 ```{r}
 ggplot(emergency.data, aes(x=age, y=los, group=interaction(acuitylevels, typeofday), colour=acuitylevels, linetype=factor(typeofday)))+geom_smooth(size=1, alpha=0.2) + ylab('length of stay') + ggtitle('Figure 1') + xlab("Age") + scale_linetype_manual('typeofday', values=c(1,2,3)) + theme_bw() + theme(axis.text.y=element_text(angle=90, hjust=0.5), plot.margin=rep(unit(0,"null"),4), legend.position='bottom', legend.box='vertical', text=element_text(size=9), legend.text=element_text(size=6)) + scale_x_continuous(breaks=seq(18,85,10))
 ```
-As you can see in the code above, aes() gives us the x and y variables, and you can introduce additional variables that will interact, acuity levels has three distinct colors ( red, green and blue) and if you look closely typeofday show us that lines that are dotted represent 1, and lines that are continuous are 0.
+As you can see in the code above, aes() gives us the x and y variables, and I introduced additional variables that will interact, acuity levels has three distinct colors ( red, green and blue) and if you look closely typeofday show us that lines that are dotted represent 1, and lines that are continuous are 0.
 So this now makes the graph easy to read: for people with acuitylevel that is mild (red), they tend to have a higher length of stay during weekdays( continuous line that represent 0: Weekdays)
 
-geom_smooth : smoothing method (function) to use, eg. lm, glm, gam, loess, rlm. For datasets with n < 1000 default is loess. For datasets with 1000 or more observations defaults to gam.
+geom_smooth : smoothing method (function) to use, eg. lm, glm, gam, loess, rlm. For datasets with n < 1000 default is loess. For datasets with 1000 or more observations defaults to gam. Here the default was gam.
 In case you have a scatterplot with a lot of noise, seeing dominant pattern can be taxing. In this case adding a smoothed line to the plot with geom_smooth() would be greatly beneficial.
 
 scale_x_continuous() here is giving limits of age range: from 18 to 85 with increments of 10.
@@ -147,7 +145,7 @@ ggplot(dat, aes(x=lastage, y=noexp, group=interaction(mscd, male), colour=mscd, 
 
 ```
 
-Lastly, a quick illustration of facet_wrap using the mpg data which one of the R default data.
+Lastly, a quick illustration of facet_wrap using the mpg data which is one of the R default data.
 ```{r} 
 data('mtcars')
 ggplot(mpg, aes(displ, hwy)) + ggtitle('Figure 3') +
@@ -187,5 +185,5 @@ ggplot(mpg, aes(displ, hwy)) + ggtitle('Figure 3') +
 # 
 
 ```
-I hope you enjoyed this little introduction to ggplot2.
+I hope you enjoyed this little tutorial to ggplot2. Please feel free to leave comments below.
 
