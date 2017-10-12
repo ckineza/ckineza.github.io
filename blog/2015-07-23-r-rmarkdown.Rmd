@@ -186,5 +186,5 @@ ggplot(mpg, aes(displ, hwy)) + ggtitle('Figure 3') +
 # 
 
 ```
-I hope you enjoyed this little tutorial to ggplot2. Please feel free to leave comments below.
+I hope you enjoyed this little tutorial to ggplot2
 
