@@ -1,0 +1,24 @@
+---
+title: "Facebook Project"
+author: "Cynthia Kineza"
+date: "October 12, 2017"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+A while ago, I worked on a project that required me to fetch data from Facebook pages. 
+The model I built calculated Gail Score for women to estimate their lifetime risk of breast cancer.
+Based on the data collected from Facebook pages, which provided me variables such as full name, message, likes count, comments counts and shares_count.
+In order to have access to the data from Facebook, I registered to have developer privileges:
+Go to [link] (https://developers.facebook.com/docs/graph-api) if want to collect data on anything that is available publicly. See [link] (https://developers.facebook.com/docs/graph-api/reference/v2.7/). Choose any field you want from which you want to extract data such as “pages”
+
+Install package RFacebook, then follow these steps:
+
+my_authorization <- fbOAuth(app_id = "enter your ID here" , app_secret = "secret code enter here")
+save(my_authorization , file = "my_authorization")
+load("my_authorization")
+page.post1 <- getPage(page="ihadcancer", token=my_authorization, n=5000, feed=TRUE)
+
