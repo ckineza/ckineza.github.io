@@ -136,15 +136,12 @@ dat_age$fittedvals <- predict(fit1, newdata=dat_age, type='response')
 
 
 fit1 <- glm(noexp ~ male + mscd + (age_m40 + age_m40c + age_csp) + raceother + highincome, data=dat, family='binomial') 
-
-
 ```
 
 Below is a plot that illustrates the fraction of total medical expenditures that are attributable to having a major smoking-caused disease (MSCD) --- including lung cancer, laryngeal cancer, COPD, CHD, stroke, and other cancers --- for different age, sex and demographic strata. The data comes from the National Medical Expenditure Survey (NMES)
 
 ```{r, message=FALSE,cache=FALSE}
 ggplot(dat, aes(x=lastage, y=noexp, group=interaction(mscd, male), colour=mscd, linetype=factor(male))) + geom_jitter(size=0.5) + geom_smooth(size=1.1, alpha=0.5) + ylab('Zero Expenditures') + ggtitle('Figure 2') + xlab("Age") + scale_linetype_manual('Male', values=c(1,3)) + theme_bw() + theme(axis.text.y=element_text(angle=90, hjust=0.5), plot.margin=rep(unit(0,"null"),4), legend.position='bottom', legend.box='horizontal', text=element_text(size=9), legend.text=element_text(size=6)) + scale_x_continuous(breaks=seq(40,80,10))
-
 ```
 
 Lastly, a quick illustration of facet_wrap using the mpg data which is one of the R default data.
