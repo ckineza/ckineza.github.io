@@ -35,7 +35,7 @@ Then, you can start adding layers such as geom_smooth(), geom_jitter(), geom_lin
 
 
 ### Example 1:
-Data used to predict the association between a typical patient' s emergency department "ED" LOS (length of stay until discharge or hospital admission) and factors that potentially contribute to LOS measured over a one-year period. The data was collected from DAP-2016.
+Data collected from DAP-2016 was used to predict the association between a typical patient' s emergency department "ED" LOS (length of stay until discharge or hospital admission) and factors that potentially contribute to LOS measured over a one-year period. 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 library(ggplot2)
 library(gridExtra)
