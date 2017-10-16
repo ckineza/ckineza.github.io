@@ -103,7 +103,8 @@
 <p>Below is a plot that illustrates the fraction of total medical expenditures that are attributable to having a major smoking-caused disease (MSCD) — including lung cancer, laryngeal cancer, COPD, CHD, stroke, and other cancers — for different age, sex and demographic strata. The data comes from the National Medical Expenditure Survey (NMES)</p>
 <pre class="r"><code>ggplot(dat, aes(x = lastage, y = noexp, group = interaction(mscd, male), colour = mscd, linetype = factor(male))) + 
     geom_jitter(size = 0.5) + xlab(&quot;Age&quot;) + ylab(&quot;Zero Expenditures&quot;) + geom_smooth(size = 1.1, alpha = 0.5) + 
-    ggtitle(&quot;Figure 2&quot;) + scale_linetype_manual(&quot;Male&quot;, values = c(1, 3)) + theme_bw() + theme(axis.text.y = element_text(angle = 90, 
+    ggtitle(&quot;Figure 2&quot;) + 
+scale_linetype_manual(&quot;Male&quot;, values = c(1, 3)) + theme_bw() + theme(axis.text.y = element_text(angle = 90, 
     hjust = 0.5), plot.margin = rep(unit(0, &quot;null&quot;), 4), legend.position = &quot;bottom&quot;, legend.box = &quot;horizontal&quot;, 
     text = element_text(size = 9), legend.text = element_text(size = 6)) + scale_x_continuous(breaks = seq(40, 
     80, 10))</code></pre>
@@ -112,7 +113,7 @@
 <pre class="r"><code>data(&quot;mtcars&quot;)
 ggplot(mpg, aes(displ, hwy)) + ggtitle(&quot;Figure 3&quot;) + geom_point() + facet_wrap(~class, nrow = 4)</code></pre>
 <p><img src="../../blog/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
-<p>I hope you enjoyed this little tutorial about ggplot2</p>
+<p>I hope you enjoyed this little tutorial about ggplot2!</p>
 </div>
 
   </div>
@@ -156,10 +157,6 @@ ggplot(mpg, aes(displ, hwy)) + ggtitle(&quot;Figure 3&quot;) + geom_point() + fa
 <section id="menu-pane" class="row menu text-center">
   
   
-  <span><a class="menu-item" href="../../blog/2015-07-23-r-rmarkdown.knit/">&lt; prev | </a></span>
-  
-  
-  <span><a class="menu-item" href="../../blog">blog</a></span>
   
   
   
