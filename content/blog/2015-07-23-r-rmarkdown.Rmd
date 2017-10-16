@@ -89,7 +89,7 @@ Acuity level: 1 (Weak), 2 & 3(Mild), 4 & 5 (severe)
 TypeofDay: 1 (Weekend) and 0(Weekdays). 
 
 
-```{r}
+```{r, warning=FALSE, message=FALSE}
 ggplot(emergency.data, aes(x=age, y=los, group=interaction(acuitylevels, typeofday), colour=acuitylevels, linetype=factor(typeofday))) +
 geom_smooth(size=1, alpha=0.2) + 
 xlab("Age") + ylab('length of stay') + 
@@ -165,7 +165,7 @@ theme(axis.text.y=element_text(angle=90, hjust=0.5), plot.margin=rep(unit(0,"nul
 ```
 
 Lastly, a quick illustration of facet_wrap using the mpg data which is one of the R default data.
-```{r} 
+```{r,warning=FALSE, message=FALSE} 
 data('mtcars')
 ggplot(mpg, aes(displ, hwy)) + 
   ggtitle('Figure 3') +
