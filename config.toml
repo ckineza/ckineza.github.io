@@ -1,6 +1,6 @@
 ## Basic Configuration
 
-baseurl = "https://ckineza.github.io" 
+baseurl = "https://ckineza.github.io"
 relativeurls = true
 builddrafts = false
 canonifyurls = false
