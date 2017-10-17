@@ -17,8 +17,8 @@
       <pubDate>Tue, 17 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>/blog/2015-10-17-r-rmarkdown/</guid>
-      <description>A while ago, I worked on a data science project that required me to fetch data from Facebook pages. The goal was to estimate risk of breast cancer in women who had commented on various Facebook breast cancer support groups
-Background: Gail Score Model In order to estimate the risk of breast cancer, a health care provider looks at how many risk factors a woman has and much of these factors increase risk.</description>
+      <description>A while ago, I worked on a data science project that required me to collect data from Facebook. The goal was to estimate risk of breast cancer in women who had commented on various Facebook breast cancer support groups.
+Background: Gail Score Model In order to estimate the risk of breast cancer, a health care provider looks at how many risk factors a woman has, many of them increase risk at different degrees.</description>
     </item>
     
     <item>

@@ -57,10 +57,11 @@
 </section>
 <section id="content-pane" class="row">
   <div class="col-md-12 text-justify content">
-    <p>A while ago, I worked on a data science project that required me to fetch data from Facebook pages. The goal was to estimate risk of breast cancer in women who had commented on various Facebook breast cancer support groups</p>
+    <p>A while ago, I worked on a data science project that required me to collect data from Facebook. The goal was to estimate risk of breast cancer in women who had commented on various Facebook breast cancer support groups.</p>
 <div id="background-gail-score-model" class="section level2">
 <h2>Background: Gail Score Model</h2>
-<p>In order to estimate the risk of breast cancer, a health care provider looks at how many risk factors a woman has and much of these factors increase risk. Out of all factors, having a BRCA1 gene mutation increase breast cancer risk significantly. The Breast Cancer Risk Assessment Tool (the Gail model) is often used by health care providers to estimate risk. Even though the tool can estimate a person’s risk, it cannot provide you the information of whether or not you will get breast cancer. The tool determines a woman’s risk of developing breast cancer within the next 5 years and within her lifetime (up to age 90). There are 7 key risk factors to evaluate breast cancer.</p>
+<p>In order to estimate the risk of breast cancer, a health care provider looks at how many risk factors a woman has, many of them increase risk at different degrees. For example, having a BRCA1 gene mutation increase breast cancer risk significantly compared to other risk factors.</p>
+<p>The Breast Cancer Risk Assessment Tool (the Gail model) is used to estimate breast cancer risk. Even though the tool can estimate a person’s risk, it cannot provide you the adequate information of whether or not you will have the disease. The tool determines a woman’s risk of developing breast cancer within the next 5 years and within her lifetime (up to age 90). Below are the seven key risk factors to evaluate such risk:</p>
 <p><em>Age</em></p>
 <p><em>Age at first period</em></p>
 <p><em>Age at the time of the birth of a first child (or has not given birth)</em></p>
@@ -71,10 +72,9 @@
 </div>
 <div id="algorithm" class="section level2">
 <h2>Algorithm</h2>
-<p>I built an algorithm that calculated Gail Score for women to estimate their lifetime risk of breast cancer. Based on the data collected from Facebook pages, which provided me variables such as full name, message, likes count, comments counts and shares_count. In order to have access to the data from Facebook, I registered to have developer privileges:</p>
-<p>Go to [link] (<a href="https://developers.facebook.com/docs/graph-api" class="uri">https://developers.facebook.com/docs/graph-api</a>) if want to collect data on anything that is available publicly.</p>
-<p>See[link] (<a href="https://developers.facebook.com/docs/graph-api/reference/v2.7/" class="uri">https://developers.facebook.com/docs/graph-api/reference/v2.7/</a>).</p>
-<p>Choose any field from which you want to extract data: such as “pages”. In my case, I used few facebook pages</p>
+<p>I built an algorithm that calculated Gail Score for women to estimate their lifetime risk of breast cancer based on the data collected from Facebook pages variables such as full name, message, likes count, comments count and shares count were extracted. In order to have access to the data, I registered to have developer privileges:</p>
+<p>Go to [link] (<a href="https://developers.facebook.com/docs/graph-api" class="uri">https://developers.facebook.com/docs/graph-api</a>) : For collecting data on anything that is available publicly.</p>
+<p>See[link] (<a href="https://developers.facebook.com/docs/graph-api/reference/v2.7/" class="uri">https://developers.facebook.com/docs/graph-api/reference/v2.7/</a>) : Choose any field from which you want to extract data such as “pages”. In my case, I used few of them.</p>
 <p>First, install package RFacebook, then follow these steps:</p>
 <p><strong>my_authorization &lt;- fbOAuth(app_id = “enter your ID here” , app_secret = “secret code enter here”)</strong></p>
 <p><strong>save(my_authorization , file = “my_authorization”)</strong></p>
@@ -83,13 +83,13 @@
 </div>
 <div id="process" class="section level2">
 <h2>Process</h2>
-<p>Few challenges presented themselves when I was building my algorithm. The biggest hurdle was finding specific information about the Gail score. Variables such as mutation genes, medical history, breast biopsy age at time of first menstrual period were impossible to obtain from a social media site while some of other variables were much easier to estimate (age, race/ethnicity, gender) with the use of various R packages and the Census Bureau public data.</p>
-<p>The names I had collected from facebook pages did not include birthdates (not surprising), so I needed to find alternatives to estimate age of each individual.I used the census bureau information that provides the overall frequency of surnames as well as some of the basic demographic characteristics that are associated with surnames (gender) The US Census Bureau tabulates a list of surnames occurring &gt; 100 times in its database (with frequency): all 152,000 of them.</p>
-<p>In order to account for uncertainty in age and race, a list of combinations were created to generate absolute breast cancer risks:</p>
-<p><em>Using the range of ages (all plausible ages of a woman from first to third quartile using the Census bureau database of firstnames) and a fixed race: a range of potential absolute risks was derived</em></p>
-<p><em>Using a range of races (obtained through probabilities generated by package “wru” using surnames as indicators giving a list of probabilities that the individual is “white”, “black”,“hispanic” or from “other” race) and the median estimated age: a range of potential risks was derived</em></p>
-<p><em>Using both the plausible ranges of age and race: a range of potential risks was derived</em></p>
-<p>All of those ranges in age and race are done by taking into account uncertainty in the absolute. Moreover, by using the variability in both age and race ranges, we obtained variability in absolute risks with a projection in 5 years and a lifetime risk. In calculating the lifetime risk I fixed the projection age of BrCA to 90 years, while a regular projection in 5 years was obtained by adding 5 years to the actual estimated age.</p>
+<p>Few challenges presented themselves when I was building my algorithm. The biggest hurdle was finding specific information about the Gail score. Variables such as mutation genes, medical history, breast biopsy age at time of first menstrual period were impossible to obtain from a social media site/ or even through comments that I was going to parse. However, some other variables were much easier to estimate (age, race/ethnicity, gender) with the use of various R packages and the Census Bureau public data.</p>
+<p>The names I had collected from facebook pages did not include birthdates (not surprising). Hence, I needed to find alternatives to estimate age of each individual who posted a comment.I used the census bureau information that provides the overall frequency of surnames as well as some of the basic demographic characteristics such as gender. The US Census Bureau tabulates a list of surnames occurring &gt; 100 times in its database (with frequency): all 152,000 of them for numerous years.</p>
+<p>In order to account for uncertainty in age and race, I created a list of combinations to generate absolute breast cancer risks:</p>
+<p><em>Using a range of age (age of a woman given first to third quartile coming from the Census bureau database of firstnames) with a fixed race. Then, a range of potential absolute risks was derived</em></p>
+<p><em>Using a range of race types (generated by package “wru” using surnames as indicators, then list of probabilities that the individual is “white”, “black”,“hispanic” or from “other” race was inferred) with the median estimated age: a range of potential risks was derived</em></p>
+<p><em>Using both the plausible age and race ranges: a range of potential risks was derived</em></p>
+<p>All of those ranges of age and race are done by taking into account uncertainty in the absolute. Moreover, by using the variability in both age and race, we obtained variability in absolute risks with a projection in 5 years and a lifetime risk. In calculating the lifetime risk I fixed the projection age of BrCA to 90 years, while a regular projection in 5 years was obtained by adding 5 years to the actual estimated age.</p>
 <p><strong>This was a fun project, I hope you are inspired to use social media data in solving everyday problems. And if you have already done so, please share your experience :) </strong></p>
 </div>
 <div id="main-packages" class="section level2">
