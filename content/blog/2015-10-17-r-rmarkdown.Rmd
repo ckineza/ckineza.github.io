@@ -1,5 +1,5 @@
 ---
-title: 'A facebook project: Gail Score Model'
+title: 'A facebook project: gail score model'
 author: "Cynthia Kineza"
 date: '2017-10-17'
 output:
