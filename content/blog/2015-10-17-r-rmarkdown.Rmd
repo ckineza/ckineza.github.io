@@ -3,8 +3,8 @@ title: 'A facebook project: Gail Score Model'
 author: "Cynthia Kineza"
 date: "October 16, 2017"
 output:
-  html_document: default
   pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -40,7 +40,7 @@ In order to have access to the data from Facebook, I registered to have develope
 
 Go to [link] (https://developers.facebook.com/docs/graph-api) if want to collect data on anything that is available publicly.
 
-See [link] (https://developers.facebook.com/docs/graph-api/reference/v2.7/). 
+See[link] (https://developers.facebook.com/docs/graph-api/reference/v2.7/). 
 
 Choose any field from which you want to extract data: such as “pages”.
 In my case, I used few facebook pages
@@ -91,11 +91,11 @@ Moreover, by using the variability in both age and race ranges, we obtained vari
 
 1. [The Breast Cancer Risk Assessment Tool (the Gail Model)] (https://www.cancer.gov/bcrisktool/)
 
-2. [wru Package] (https://cran.r-project.org/web/packages/wru/)
+2. [wru] (https://cran.r-project.org/web/packages/wru/)
 
-3. [Gender package] (https://cran.r-project.org/web/packages/gender/)
+3. [Gender] (https://cran.r-project.org/web/packages/gender/)
 
-4. [Rfacebook package] (https://cran.r-project.org/web/packages/Rfacebook/)
+4. [Rfacebook] (https://cran.r-project.org/web/packages/Rfacebook/)
 
 5. [BCRA] (https://cran.r-project.org/web/packages/BCRA/)
 
