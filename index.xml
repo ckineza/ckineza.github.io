@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>A facebook project: gail score model</title>
+      <link>/blog/2015-10-17-r-rmarkdown/</link>
+      <pubDate>Tue, 17 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2015-10-17-r-rmarkdown/</guid>
+      <description>A while ago, I worked on a data science project that required me to fetch data from Facebook pages. The goal was to estimate risk of breast cancer in women who had commented on various Facebook breast cancer support groups
+Background: Gail Score Model In order to estimate the risk of breast cancer, a health care provider looks at how many risk factors a woman has and much of these factors increase risk.</description>
+    </item>
+    
+    <item>
       <title>secondpost</title>
       <link>/post/secondpost/</link>
       <pubDate>Tue, 17 Oct 2017 00:00:00 +0000</pubDate>
@@ -47,16 +57,6 @@ ggplot2 ggplot2 is such a powerful R package for visualization. I personally adm
       <guid>/coderag/</guid>
       <description>Notes: This article originally appeared in CodeRag.
 Code/Rag has always been more than just another online tech blog. We strive to be part of the tech community—serving an essential, fundamental look at what’s going on in the valley. It’s why our tagline is “Know Your Code.” We think a tech news publication should know the basics. Be the source. Get down to brass tacks. We can do that because we’re part of the very ecosystem we’re reporting on.</description>
-    </item>
-    
-    <item>
-      <title>A facebook project: Gail Score Model</title>
-      <link>/blog/2015-10-17-r-rmarkdown/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/2015-10-17-r-rmarkdown/</guid>
-      <description>A while ago, I worked on a data science project that required me to fetch data from Facebook pages. The goal was to estimate risk of breast cancer in women who had commented on various Facebook breast cancer support groups
-Background: Gail Score Model In order to estimate the risk of breast cancer, a health care provider looks at how many risk factors a woman has and much of these factors increase risk.</description>
     </item>
     
   </channel>
