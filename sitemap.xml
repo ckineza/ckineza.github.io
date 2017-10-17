@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/post/r-rmarkdown-rmd/</loc>
-    <lastmod>2017-10-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/post/secondpost/</loc>
     <lastmod>2017-10-17T00:00:00+00:00</lastmod>
   </url>
@@ -28,13 +23,17 @@
   </url>
   
   <url>
-    <loc>/tags/about/</loc>
+    <loc>/blog/2015-10-17-r-rmarkdown/</loc>
+  </url>
+  
+  <url>
+    <loc>/categories/about/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/about/</loc>
+    <loc>/tags/about/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
     <priority>0</priority>
   </url>
