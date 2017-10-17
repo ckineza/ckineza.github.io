@@ -81,7 +81,7 @@ Moreover, by using the variability in both age and race ranges, we obtained vari
 
 ##Main Packages
 
-*Gender Package*: This package allows you to estimate the gender based on names from a chosen timeline
+*Gender*: This package allows you to estimate the gender based on names from a chosen timeline
 
 *wru*: Who are You? The method utilizes the Bayes'Rule to compute the posterior probability of each racial category for any given individual. 
 
