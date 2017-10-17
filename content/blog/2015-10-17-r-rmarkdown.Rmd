@@ -76,7 +76,7 @@ Moreover, by using the variability in both age and race ranges, we obtained vari
 
 
 
-**This was a fun project, I hope you are inspired to use social media data in solving everyday problems. And if you already have done so, please share your experience :) **
+**This was a fun project, I hope you are inspired to use social media data in solving everyday problems. And if you have already done so, please share your experience :) **
 
 
 ##Main Packages
