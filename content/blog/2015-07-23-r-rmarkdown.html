@@ -42,8 +42,7 @@ output: pdf_document
     ggtitle(&quot;Figure 1&quot;) + scale_linetype_manual(&quot;typeofday&quot;, values = c(1, 2, 3)) + theme_bw() + theme(axis.text.y = element_text(angle = 90, 
     hjust = 0.5), plot.margin = rep(unit(0, &quot;null&quot;), 4), legend.position = &quot;bottom&quot;, legend.box = &quot;vertical&quot;, 
     text = element_text(size = 9), legend.text = element_text(size = 6)) + scale_x_continuous(breaks = seq(18, 
-    85, 10))
-## `geom_smooth()` using method = &#39;gam&#39;</code></pre>
+    85, 10))</code></pre>
 <p><img src="/blog/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-2-1.png" width="672" /> As you can see in the code above, aes() gives us the x and y variables, and I introduced additional variables that will interact, acuity levels has three distinct colors ( red, green and blue) and if you look closely typeofday show us that lines that are dotted represent 1, and lines that are continuous are 0. Patients with acuity levels represented as mild (red), tend to have a higher length of stay during weekdays (continuous line that represent 0: Weekdays).</p>
 <p>geom_smooth : smoothing method (function) to use, eg. lm, glm, gam, loess, rlm. For datasets with n &lt; 1000 default is loess. For datasets with 1000 or more observations defaults to gam. Here the default was gam. In case you have a scatterplot with a lot of noise, seeing dominant pattern can be taxing. In this case adding a smoothed line to the plot with geom_smooth() would be greatly beneficial.</p>
 <p>scale_x_continuous() here is giving limits of age range: from 18 to 85 with increments of 10.</p>
