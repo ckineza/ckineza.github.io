@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on My blog</title>
-    <link>https://ckineza.github.io/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Sun, 02 Oct 2016 22:55:05 -0400</lastBuildDate>
     
-	<atom:link href="https://ckineza.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>https://ckineza.github.io/tags/about/</link>
+      <link>/tags/about/</link>
       <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
       
-      <guid>https://ckineza.github.io/tags/about/</guid>
+      <guid>/tags/about/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Aviato</title>
-      <link>https://ckineza.github.io/tags/aviato/</link>
+      <link>/tags/aviato/</link>
       <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
       
-      <guid>https://ckineza.github.io/tags/aviato/</guid>
+      <guid>/tags/aviato/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bachman</title>
-      <link>https://ckineza.github.io/tags/bachman/</link>
+      <link>/tags/bachman/</link>
       <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
       
-      <guid>https://ckineza.github.io/tags/bachman/</guid>
+      <guid>/tags/bachman/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Pied Piper</title>
-      <link>https://ckineza.github.io/tags/pied-piper/</link>
+      <link>/tags/pied-piper/</link>
       <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
       
-      <guid>https://ckineza.github.io/tags/pied-piper/</guid>
+      <guid>/tags/pied-piper/</guid>
       <description></description>
     </item>
     
