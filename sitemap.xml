@@ -3,6 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/blog/2017-11-09-r-rmarkdown/</loc>
+    <lastmod>2017-11-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/thirdpost/</loc>
+    <lastmod>2017-11-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/thirdpost/</loc>
+    <lastmod>2017-11-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/thirdpost-rmd/</loc>
+    <lastmod>2017-11-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/blog/2015-10-17-r-rmarkdown/</loc>
     <lastmod>2017-10-17T00:00:00+00:00</lastmod>
   </url>
@@ -65,7 +85,7 @@
   
   <url>
     <loc>/blog/</loc>
-    <lastmod>2017-10-17T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -83,7 +103,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-10-17T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -95,7 +115,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2017-10-17T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

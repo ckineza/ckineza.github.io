@@ -6,10 +6,37 @@
     <description>Recent content in Posts on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 17 Oct 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Nov 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>thirdpost</title>
+      <link>/post/thirdpost/</link>
+      <pubDate>Thu, 09 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/thirdpost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>thirdpost</title>
+      <link>/post/thirdpost/</link>
+      <pubDate>Thu, 09 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/thirdpost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>thirdpost.Rmd</title>
+      <link>/post/thirdpost-rmd/</link>
+      <pubDate>Thu, 09 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/thirdpost-rmd/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>secondpost</title>

@@ -43,16 +43,13 @@
 
 
 <header class="row text-left title">
-  <h1 class="title">secondpost</h1>
+  <h1 class="title">High Dimensional Data</h1>
 </header>
 <section id="category-pane" class="row meta">
   
   <div class="col-md-12">
     <h6 class="text-left meta">
-      PUBLISHED ON OCT 17, 2017
-      
-      
-      
+      PUBLISHED ON NOV 9, 2017
       
     </h6>
   </div>
@@ -60,16 +57,34 @@
 </section>
 <section id="content-pane" class="row">
   <div class="col-md-12 text-justify content">
-    
+    <p>High dimensional data occurs when there is more predictors / features than number of observations. Lots of datasets coming out of modern biological techniques are high -dimensional.</p>
+<div id="examples-of-high-dimensional-data" class="section level3">
+<h3>Examples of high dimensional data</h3>
+<p>Predict risk of diabetes on the basis of DNA sequence data Identify regions of interest associated with brain activation during a memory task</p>
+<p>This brings out statistical challenges. Too many predictors will overfit the data ( overfitting occurs when regression model is tailored to fit a sample but performs poorly on other observations) We must care about model’s performance on observations not used to fit the model ( we would want to predict the length of stay of an individual who walks into the emergency room given his symptoms).</p>
+<p>One would ask why the number of variables matters, when the number of individuals is less than the predictors you can always get a perfect model fit to the training data but the test error will be pretty bad.</p>
+<p><br />
+<img src="../../Users/ckineza/Desktop/Screen%20Shot%202017-11-09%20at%207.35.15%20PM.png" style="width:90.0%" /></p>
+<p><br />
+Dimensionality matters since classical statistical techniques cannot be applied. Futhermore there are risks of overfitting, false positives and more.</p>
+</div>
+<div id="some-of-the-techniques-to-estimate-the-test-error-would-be" class="section level3">
+<h3>Some of the techniques to estimate the test error would be</h3>
+<p><em>The validation set approach</em>: Split data into two equal sets, train on one set and evaluate performance on the other.</p>
+<p><em>Leave-one-out cross-validation</em>:fit N models, each on n-1 of the observations. The evaluate each model on the left-out observation</p>
+<p><em>K-fold cross-validation</em>: Data is split into 5 sets, train numerous times a model on 4 sets and evaluate its performance on the 5th.</p>
+<p>For Big data ( high dimensional ), we cannot usually perform least squares regression to fit a model because we will get zero training error however we will get a very bad test error.</p>
+<p>Instead we will use methods such as Variable pre-selection, Principal components regression, Ridge regression, or Lasso Regression which will fit less complex models. Those are some of the alternatives to least squares.</p>
+<p>For neuroimaging data analysis, I have faced the issue of high dimensionality and used some the methods mentioned above to predict regions of interest associated with tasks within individuals.</p>
+<p>Thanks for those who have reached out and gave me feedbacks! I love to read your emails. I will be blogging more frequently in the future</p>
+</div>
+
   </div>
 </section>
 <section id="tag-pane" class="row meta">
   
   <div class="col-md-12">
     <h6 class="text-right meta">
-      
-      
-      
       
     </h6>
   </div>
@@ -105,11 +120,11 @@
 <section id="menu-pane" class="row menu text-center">
   
   
+  <span><a class="menu-item" href="../../blog/2015-10-17-r-rmarkdown/">&lt; prev | </a></span>
   
-  <span><a class="menu-item" href="../../post">post</a></span>
   
+  <span><a class="menu-item" href="../../blog">blog</a></span>
   
-  <span><a class="menu-item" href="../../post/thirdpost-rmd/"> | next &gt;</a></span>
   
   
   <h4 class="text-center"><a class="menu-item" href="../../">home</a></h4>

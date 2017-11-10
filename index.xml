@@ -6,10 +6,48 @@
     <description>Recent content on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 17 Oct 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Nov 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>High Dimensional Data</title>
+      <link>/blog/2017-11-09-r-rmarkdown/</link>
+      <pubDate>Thu, 09 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2017-11-09-r-rmarkdown/</guid>
+      <description>High dimensional data occurs when there is more predictors / features than number of observations. Lots of datasets coming out of modern biological techniques are high -dimensional.
+Examples of high dimensional data Predict risk of diabetes on the basis of DNA sequence data Identify regions of interest associated with brain activation during a memory task
+This brings out statistical challenges. Too many predictors will overfit the data ( overfitting occurs when regression model is tailored to fit a sample but performs poorly on other observations) We must care about model’s performance on observations not used to fit the model ( we would want to predict the length of stay of an individual who walks into the emergency room given his symptoms).</description>
+    </item>
+    
+    <item>
+      <title>thirdpost</title>
+      <link>/post/thirdpost/</link>
+      <pubDate>Thu, 09 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/thirdpost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>thirdpost</title>
+      <link>/post/thirdpost/</link>
+      <pubDate>Thu, 09 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/thirdpost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>thirdpost.Rmd</title>
+      <link>/post/thirdpost-rmd/</link>
+      <pubDate>Thu, 09 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/thirdpost-rmd/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>A facebook project: gail score model</title>
