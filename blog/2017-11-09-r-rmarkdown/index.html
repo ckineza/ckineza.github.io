@@ -57,24 +57,26 @@
 </section>
 <section id="content-pane" class="row">
   <div class="col-md-12 text-justify content">
-    <p>High dimensional data occurs when there is more predictors / features than number of observations. Lots of datasets coming out of modern biological techniques are high -dimensional.</p>
+    <p>High dimensional data occurs when there is more predictors / features than number of observations. Lots of datasets coming out of modern biological techniques are high-dimensional.</p>
 <div id="examples-of-high-dimensional-data" class="section level3">
 <h3>Examples of high dimensional data</h3>
-<p>Predict risk of diabetes on the basis of DNA sequence data Identify regions of interest associated with brain activation during a memory task</p>
-<p>This brings out statistical challenges. Too many predictors will overfit the data ( overfitting occurs when regression model is tailored to fit a sample but performs poorly on other observations) We must care about model’s performance on observations not used to fit the model ( we would want to predict the length of stay of an individual who walks into the emergency room given his symptoms).</p>
-<p>One would ask why the number of variables matters, when the number of individuals is less than the predictors you can always get a perfect model fit to the training data but the test error will be pretty bad.</p>
-<p><img src="../../Users/ckineza/Desktop/Screen%20Shot%202017-11-09%20at%207.35.15%20PM.png" width="657" /></p>
-<p>Dimensionality matters since classical statistical techniques cannot be applied. Futhermore there are risks of overfitting, false positives and more.</p>
+<ol style="list-style-type: decimal">
+<li>Predict risk of diabetes on the basis of DNA sequence data</li>
+<li>Identify regions of interest associated with brain activation during a memory task …</li>
+</ol>
+<p>This brings out statistical challenges. Too many predictors will overfit the data ( overfitting occurs when regression model is tailored to fit a sample but performs poorly on other observations) We must care about model’s performance on observations not used to fit the model ( for example we would want to predict the length of stay of any new individual who walks into the emergency room given his symptoms).</p>
+<p>One could ask why the number of variables matters. Well, when the number of individuals is less than the predictors you can always get a perfect model fit to the training data but the test error will be pretty bad.</p>
+<p>Dimensionality matters since classical statistical techniques cannot be applied. Furthermore, there are risks of overfitting, false positives and more.</p>
 </div>
 <div id="some-of-the-techniques-to-estimate-the-test-error-would-be" class="section level3">
 <h3>Some of the techniques to estimate the test error would be</h3>
 <p><em>The validation set approach</em>: Split data into two equal sets, train on one set and evaluate performance on the other.</p>
-<p><em>Leave-one-out cross-validation</em>:fit N models, each on n-1 of the observations. The evaluate each model on the left-out observation</p>
-<p><em>K-fold cross-validation</em>: Data is split into 5 sets, train numerous times a model on 4 sets and evaluate its performance on the 5th.</p>
+<p><em>Leave-one-out cross-validation</em>: Fit N models, each on n-1 of the observations. Then evaluate each model on the left-out observation</p>
+<p><em>K-fold cross-validation</em>: Split data into 5 sets, train numerous times a model on 4 sets and evaluate its performance on the 5th.</p>
 <p>For Big data ( high dimensional ), we cannot usually perform least squares regression to fit a model because we will get zero training error however we will get a very bad test error.</p>
 <p>Instead we will use methods such as Variable pre-selection, Principal components regression, Ridge regression, or Lasso Regression which will fit less complex models. Those are some of the alternatives to least squares.</p>
-<p>For neuroimaging data analysis, I have faced the issue of high dimensionality and used some the methods mentioned above to predict regions of interest associated with tasks within individuals.</p>
-<p>Thanks for those who have reached out and gave me feedbacks! I love to read your emails. I will be blogging more frequently in the future</p>
+<p>For neuroimaging data analysis, I faced the issue of high dimensionality and used some the methods mentioned above to predict regions of interest associated with tasks given individuals demographic features.</p>
+<p>Thanks for those who have reached out and gave me feedbacks! I love to read your emails. I will be blogging more frequently in the future!</p>
 </div>
 
   </div>
