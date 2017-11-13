@@ -17,8 +17,8 @@
       <pubDate>Thu, 09 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>/blog/2017-11-09-r-rmarkdown/</guid>
-      <description>High dimensional data occurs when there is more predictors / features than number of observations. Lots of datasets coming out of modern biological techniques are high-dimensional.
-Examples of high dimensional data Predict risk of diabetes on the basis of DNA sequence data Identify regions of interest associated with brain activation during a memory task …  This brings out statistical challenges. Too many predictors will overfit the data ( overfitting occurs when regression model is tailored to fit a sample but performs poorly on other observations) We must care about model’s performance on observations not used to fit the model ( for example we would want to predict the length of stay of any new individual who walks into the emergency room given his symptoms).</description>
+      <description>High dimensional data occurs when there is more predictors / features than number of observations. The majority of datasets coming out of modern biological techniques are high-dimensional.
+Examples of high dimensional data Predict risk of diabetes on the basis of DNA sequence data Identify regions of interest associated with brain activation during a memory task …  This brings out statistical challenges. Too many predictors will overfit the data ( overfitting occurs when a regression model is tailored to fit a particular set of data but fails to fit additional data or predict future observations reliably).</description>
     </item>
     
     <item>

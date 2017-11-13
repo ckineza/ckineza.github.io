@@ -57,14 +57,15 @@
 </section>
 <section id="content-pane" class="row">
   <div class="col-md-12 text-justify content">
-    <p>High dimensional data occurs when there is more predictors / features than number of observations. Lots of datasets coming out of modern biological techniques are high-dimensional.</p>
+    <p>High dimensional data occurs when there is more predictors / features than number of observations. The majority of datasets coming out of modern biological techniques are high-dimensional.</p>
 <div id="examples-of-high-dimensional-data" class="section level3">
 <h3>Examples of high dimensional data</h3>
 <ol style="list-style-type: decimal">
 <li>Predict risk of diabetes on the basis of DNA sequence data</li>
 <li>Identify regions of interest associated with brain activation during a memory task …</li>
 </ol>
-<p>This brings out statistical challenges. Too many predictors will overfit the data ( overfitting occurs when regression model is tailored to fit a sample but performs poorly on other observations) We must care about model’s performance on observations not used to fit the model ( for example we would want to predict the length of stay of any new individual who walks into the emergency room given his symptoms).</p>
+<p>This brings out statistical challenges. Too many predictors will overfit the data ( overfitting occurs when a regression model is tailored to fit a particular set of data but fails to fit additional data or predict future observations reliably).</p>
+<p>We must care about model’s performance on observations not used to fit the model (for example we may want to predict the length of stay of a new individual who walks into the emergency room given his symptoms).</p>
 <p>One could ask why the number of variables matters. Well, when the number of individuals is less than the predictors you can always get a perfect model fit to the training data but the test error will be pretty bad.</p>
 <p>Dimensionality matters since classical statistical techniques cannot be applied. Furthermore, there are risks of overfitting, false positives and more.</p>
 </div>
@@ -75,9 +76,9 @@
 <p><em>K-fold cross-validation</em>: Split data into 5 sets, train numerous times a model on 4 sets and evaluate its performance on the 5th.</p>
 <p>For Big data ( high dimensional ), we cannot usually perform least squares regression to fit a model because we will get zero training error however we will get a very bad test error.</p>
 <p>Instead we will use methods such as Variable pre-selection, Principal components regression, Ridge regression, or Lasso Regression which will fit less complex models. Those are some of the alternatives to least squares.</p>
-<p>For neuroimaging data analysis, I faced the issue of high dimensionality and used some the methods mentioned above to predict regions of interest associated with tasks given individuals demographic features.</p>
-<p>There are a lot of things that I glossed over in this post in order to not take up all of your time, this was just an introduction about supervised and unsupervised statistical machine learning, so please get in contact if you have any questions or comments.</p>
-<p>Thanks for those who have reached out and gave me feedbacks! I love to read your emails. I will be blogging more frequently in the future!</p>
+<p>For neuroimaging data analysis, due to high dimensionality, I use methods mentioned above to predict regions of interest associated with tasks given individuals demographic features.</p>
+<p>There are a lot of things that I glossed over in this post, this was just an introduction about supervised and unsupervised statistical machine learning, I will go more in depth in the future, in the meantime feel free to send me an email if you have suggestions or questions.</p>
+<p>Thanks for those who have reached out and gave me feedbacks I will be blogging more frequently in the future!</p>
 </div>
 
   </div>
