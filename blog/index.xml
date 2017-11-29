@@ -6,10 +6,22 @@
     <description>Recent content in Blogs on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 09 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Nov 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bayesian analysis using a Three-Component Mixture Model</title>
+      <link>/blog/2017-11-28-r-rmarkdown/</link>
+      <pubDate>Tue, 28 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2017-11-28-r-rmarkdown/</guid>
+      <description>This year I took a course on Bayesian analysis. Many concepts were introduced such as Monte Carlo approximation, Markov Chain Monte Carlo / Gibb’s Sampler,
+I would suggest reading these books [Bayesian Methods for Data Analysis] (https://books.google.com/books/about/Bayesian_Methods_for_Data_Analysis_Third.html?id=GTJUt8fcFx8C), [A first course in Bayesian Statistical Methods] (https://www.jstor.org/stable/23116951?seq=1#page_scan_tab_contents)
+In Chapters 10,11&amp;amp;12 in “Bayesian Methods for Data analysis”, Bayesian computational concepts are introduced. I would suggest learning those concepts.
+The project I was part of was about constructing a three component mixture model using Children’s Behavorial Questionnaire(CBQ)</description>
+    </item>
     
     <item>
       <title>High Dimensional Data</title>
