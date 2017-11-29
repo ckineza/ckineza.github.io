@@ -18,7 +18,8 @@
       
       <guid>/blog/2017-11-28-r-rmarkdown/</guid>
       <description>This year I took a course on Bayesian analysis. Many concepts were introduced such as Monte Carlo approximation, Markov Chain Monte Carlo / Gibb’s Sampler,
-I would suggest reading these books [Bayesian Methods for Data Analysis] (https://books.google.com/books/about/Bayesian_Methods_for_Data_Analysis_Third.html?id=GTJUt8fcFx8C), [A first course in Bayesian Statistical Methods] (https://www.jstor.org/stable/23116951?seq=1#page_scan_tab_contents)
+I would suggest reading these books Bayesian Methods for Data Analysis
+A first course in Bayesian Statistical Methods
 In Chapters 10,11&amp;amp;12 in “Bayesian Methods for Data analysis”, Bayesian computational concepts are introduced. I would suggest learning those concepts.
 The project I was part of was about constructing a three component mixture model using Children’s Behavorial Questionnaire(CBQ)</description>
     </item>
