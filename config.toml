@@ -1,0 +1,64 @@
+## Basic Configuration
+
+baseurl = "https://ckineza.github.io"
+relativeurls = true
+builddrafts = false
+canonifyurls = false
+languageCode = "en-US"
+
+contentdir = "content"
+layoutdir = "layouts"
+publishdir = "../ckineza.github.io"
+ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
+
+author = "Cynthia Kineza"
+title = "My blog"
+
+theme = "hugo-goa"
+
+## Hugo Built-in Features
+disqusShortname = "ckineza-1" 
+googleAnalytics = "XYZ"
+enableRobotsTXT = true
+
+## Site Settings
+[params]
+author = "Cynthia Kineza"
+intro = "Data Scientist"
+description = "All things related to data, statistics and science"
+authorimage = "Screen Shot 2017-09-04 at 8.38.22 PM.png"
+dateformat = "Jan 2, 2006"
+
+## Site Meta Settings
+[params.meta]
+description = "Simple minimalist theme"
+keywords = "R, Python, Data Science, Statistics"
+
+## Social Accounts
+[params.social]
+github = "ckineza"
+linkedin = "ckineza"
+email = "ckineza@gmail.com"
+
+## Extras
+[params.extra]
+copyright = "© 2017. Cynthia Kineza. [Some Rights Reserved](http://creativecommons.org/licenses/by/3.0/)." 
+poweredby = true
+highlightjs = true
+
+## Main Menu
+[[menu.main]]
+    name = "blog"
+    weight = 100
+    identifier = "blog"
+    url = "/blog/"
+[[menu.main]]
+    name = "about"
+    identifier = "about"
+    weight = 200
+    url = "/about/"
+[[menu.main]]
+    name = "coderag"
+    identifier = "coderag"
+    weight = 300
+    url = "/coderag/"

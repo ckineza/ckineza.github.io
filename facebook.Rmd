@@ -1,0 +1,60 @@
+---
+title: "Facebook Project"
+author: "Cynthia Kineza"
+date: "October 12, 2017"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+A while ago, I worked on a project that required me to fetch data from Facebook pages.
+The goal was to estimate risk of breast cancer in women who had commented on various breast cancer support facebook pages. 
+
+##Background: Gail Score Model
+In order to estimate your risk of breast cancer, your health care provider looks at how many risk factors you have and much of these factors increase risk. Out of all the other factors, having a BRCA1 gene mutation increase breast cancer risk significantly.
+The Breast Cancer Risk Assessment Tool (the Gail model) is often used by health care providers to estimate risk.
+Even though the tool can estimate your risk, it cannot tell whether or not you will get breast cancer. The tool determines a woman's risk of developing breast cancer within the next 5 years and within her lifetime (up to age 90).
+It utilize 7 key risk factors to evaluate breast cancer.
+
+**Age**
+**Age at first period**
+**Age at the time of the birth of a first child (or has not given birth)**
+**Family history of breast cancer (mother, sister or daughter)**
+**Number of past breast biopsies**
+**Number of breast biopsies showing atypical hyperplasia**
+**Race/ethnicity**
+
+
+The model I built an algorithm that calculated Gail Score for women to estimate their lifetime risk of breast cancer.
+Based on the data collected from Facebook pages, which provided me variables such as full name, message, likes count, comments counts and shares_count.
+In order to have access to the data from Facebook, I registered to have developer privileges:
+Go to [link] (https://developers.facebook.com/docs/graph-api) if want to collect data on anything that is available publicly. 
+See [link] (https://developers.facebook.com/docs/graph-api/reference/v2.7/). 
+Choose any field you want from which you want to extract data such as “pages”.
+Used few facebook pages in my project.(I personally would not share the data as I believe it violates privacy of individuals sharing their stories).
+But I will give you some tips on Rpackages I used that became very useful.
+
+First, install package RFacebook, then follow these steps:
+
+my_authorization <- fbOAuth(app_id = "enter your ID here" , app_secret = "secret code enter here")
+save(my_authorization , file = "my_authorization")
+load("my_authorization")
+page.post1 <- getPage(page="Include here the name of the facebook page", token=my_authorization, n=5000, feed=TRUE)
+
+
+dataset.names = gender(merge.dataset$firstname,years = c(1932,2012))
+    colnames(dataset.names)[which(names(dataset.names) == "name")] <- "firstname"
+    dataset.names = dataset.names[,c("firstname","gender")]
+    merge.dataset <- merge.dataset[!duplicated(merge.dataset), ]
+    dataset.name.gender = inner_join(merge.dataset,dataset.names)         
+    dataset.name.gender <- dataset.name.gender[!duplicated(dataset.name.gender), ]
+
+install.packages("wru", dependencies = T)
+install.packages("gender", dependencies = T)
+install.packages("BCRA", dependencies = T)
+
+#Resources
+[The Breast Cancer Risk Assessment Tool (the Gail Model)] (https://www.cancer.gov/bcrisktool/)
