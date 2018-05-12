@@ -1,9 +1,0 @@
----
-title: forthpost
-author: ~
-date: '2018-05-12'
-slug: forthpost
-categories: []
-tags: []
----
-
