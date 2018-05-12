@@ -6,10 +6,29 @@
     <description>Recent content in Blogs on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 28 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 12 May 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>My Journey</title>
+      <link>/blog/2018-05-12-r-rmarkdown/</link>
+      <pubDate>Sat, 12 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2018-05-12-r-rmarkdown/</guid>
+      <description>Education During my time at Johns Hopkins University, I was highly inspired by the ingenuity of people around me. Ideas were developed, theories challenged and critics made on the works of others. It was an environment of innovation and elevated creativity like nowhere else. As someone looking constantly for challenges, highly motivated and a lifelong learner, the atmosphere stimulated my creativity.
+Collaboration was key and I took every opportunity that came my way.</description>
+    </item>
+    
+    <item>
+      <title>forthpost</title>
+      <link>/blog/forthpost/</link>
+      <pubDate>Sat, 12 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/forthpost/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Bayesian analysis using a Three-Component Mixture Model</title>
