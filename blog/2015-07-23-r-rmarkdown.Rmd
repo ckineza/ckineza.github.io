@@ -116,7 +116,7 @@ library(boot)
 library(gridExtra)
 library(xtable)
 
-load("/Users/ckineza/Desktop/My Life /Everything/nmes.rdata")
+load("~/Downloads/nmes.rdata")
 dat <- nmes
 dat$mscd <- (dat$lc5==1) | (dat$chd5==1)
 dat$noexp <- (dat$totalexp == 0)

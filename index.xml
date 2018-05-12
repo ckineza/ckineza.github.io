@@ -6,10 +6,37 @@
     <description>Recent content on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 28 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 12 May 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>My Journey.Rmd</title>
+      <link>/post/my-journey-rmd/</link>
+      <pubDate>Sat, 12 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/my-journey-rmd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>forthpost</title>
+      <link>/post/forthpost/</link>
+      <pubDate>Sat, 12 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/forthpost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>forthpost.Rmd</title>
+      <link>/post/forthpost-rmd/</link>
+      <pubDate>Sat, 12 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/forthpost-rmd/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Bayesian analysis using a Three-Component Mixture Model</title>
